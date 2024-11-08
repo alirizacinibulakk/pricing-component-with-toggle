@@ -1,0 +1,232 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 24px;
+    margin-top: 64px;
+    background-color: #F7F7FE;
+}
+ul{
+    list-style: none;
+}
+header{
+    margin-bottom: 80px;
+}
+header h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39.01px;
+    text-align: center;
+    color: #6E728E;
+    margin-bottom: 40px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.label {
+    font-size: 16px;
+    color: #333;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 32px;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    transition: 0.4s;
+    border-radius: 16px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    margin-left: 3px;
+    margin-left: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input{
+    margin-left: 10px;
+    display: none;
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
+.text{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: right;    
+    color: #6E728E;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 327px;
+    height: 453px;
+    padding-block: 21px;
+    padding-inline: 29px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;  
+    color: #6E728E;  
+    margin-bottom: 24px;
+}
+.card hr{
+    margin-bottom: 12px;
+    opacity: 25%;
+}
+.card hr:last-child{
+    margin-bottom: 2rem;
+}
+.card ul li{
+    margin-bottom: 12px;
+    text-align: center;
+    color: #6E728E;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;    
+}
+.card button{
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    color: #FFFFFF;
+    padding-block: 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15.85px;
+    letter-spacing: 1.3928571939468384px;
+    text-align: center;
+    cursor: pointer;
+}
+.card:nth-child(2){
+    background: linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%);
+}
+.card:nth-child(2) h3{
+    color: #FFFFFF;
+}
+.card:nth-child(2) .price-sum:nth-child(2) p{
+    color: #FFFFFF;
+}
+.card:nth-child(2) button{
+    background: #FFFFFF;
+    color: #6D72DE;
+}
+.card .white-text li{
+    color: #FFFFFF;
+}
+.price{
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -2.1600000858306885px;
+    text-align: left;    
+    color: #4A4D60; 
+}
+.price-sum{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+
+}
+
+.price-sum p:first-child{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48.76px;
+    letter-spacing: -1.2000000476837158px;
+    text-align: end;
+    color: #4A4D60;    
+}
+
+@media only screen and (min-width: 1280px){
+    body{
+        margin-inline: 195px;
+        margin-top: 71px;
+    }
+    .slider:hover {
+        background: #c9cbf5;
+        transition: transform 0.8s;
+    }
+    .card-container{
+        flex-direction: row;
+        align-items: center;
+    }
+    .card:first-child{
+        width: 350px;
+        height: 453px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .card:first-child button:hover{
+        color: #696EDD;
+        background: #FFFFFF;
+        border: 1px solid #6D72DE;
+    }
+    .card:nth-child(2){
+        width: 350px;
+        height: 501px;
+    }
+    .card:nth-child(2) button:hover{
+        color: #FFFFFF;
+        background: none;
+        border: 1px solid #FFFFFF;
+    }
+    .card:last-child{
+        width: 350px;
+        height: 453px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .card:last-child button:hover{
+        color: #696EDD;
+        background: #FFFFFF;
+        border: 1px solid #6D72DE;
+    }
+    
+}
